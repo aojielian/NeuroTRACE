@@ -1,0 +1,11 @@
+resource	role	accession_or_source	public_url_or_note
+Gandal 2022	adult cortical discovery and NNLS reference	see manuscript and Supplementary Table S1	public/published resource
+BrainSpan	developmental reference	BrainSpan developmental transcriptome	public resource
+GSE102741	external ASD validation	GEO GSE102741	public GEO resource
+GSE64018	external ASD validation	GEO GSE64018	public GEO resource
+PsychENCODE	single-nucleus contextualization	PsychENCODE Science 2024 resource	public/controlled depending on source
+Velmeshev 2019	single-nucleus contextualization	published ASD snRNA-seq resource	public/published resource
+SFARI	ASD genetic-risk resources	SFARI Gene	public/resource version should be recorded
+gnomAD	gene constraint validation	gnomAD v2.1.1 constraint metrics	public resource
+Zhou 2022	ASD genetic-resource validation	published gene sets	public/published resource
+Satterstrom 2020	ASD exome-risk validation	published gene set	public/published resource
