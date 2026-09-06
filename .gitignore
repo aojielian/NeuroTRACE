@@ -1,40 +1,7 @@
-# Large data
-*.rds
-*.RData
-*.h5
-*.h5ad
-*.mtx
-*.mtx.gz
-*.vcf
-*.vcf.gz
-*.bam
-*.cram
-*.fastq
-*.fastq.gz
-*.fq.gz
-*.tar
-*.tar.gz
-*.zip
-
-# Results and logs
-results/
-plotdata/
-paper_figures/
-FROZEN/
-logs/
-outs/
-errs/
-tmp/
-*.log
-*.out
-*.err
-
-# HPC submit files
-*.slurm
-*.sbatch
-
-# Python/R cache
+.venv/
 __pycache__/
-.Rhistory
-.RData
-.Rproj.user/
+*.py[cod]
+.DS_Store
+data/upstream/
+data/processed/results/
+figures/generated/

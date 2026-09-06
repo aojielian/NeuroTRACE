@@ -1,0 +1,15 @@
+{
+  "name": "NeuroTRACE public reproducibility release",
+  "version": "2026.09.06",
+  "release_scope": "Journal-neutral analysis code, environment, documentation, and a companion reproducibility archive",
+  "method": "Dual-head gene-only PPR with positive and negative restart channels",
+  "github_contains_figures": false,
+  "github_contains_processed_data": false,
+  "github_contains_figure_source_data": false,
+  "zenodo_archive": "NeuroTRACE_Reproducibility_Archive_FINAL.zip",
+  "repository": "https://github.com/aojielian/NeuroTRACE",
+  "doi": null,
+  "release_date": "2026-09-06",
+  "zenodo_doi": "10.5281/zenodo.22525118",
+  "zenodo_url": "https://doi.org/10.5281/zenodo.22525118"
+}

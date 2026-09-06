@@ -1,8 +1,0 @@
-folder	contents
-final_main_figures	Figure1-Figure6 PDF/PNG
-final_supplementary_figures	Supplementary Figure S1-S5 PDF/PNG
-supplementary_tables	Submission-clean Supplementary Tables workbook
-plotdata	Plot data underlying all figures
-processed_results	Module weights, graph outputs, enrichment results, validation models, robustness outputs
-software_environment	sessionInfo.txt and environment.yml
-manifests	input_data_manifest.tsv and output_manifest.tsv
