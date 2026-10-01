@@ -1,0 +1,16 @@
+panel	display_order	component_type	component	definition
+A	1	input	signed native module weights	frozen signed weights
+A	2	restart	positive restart channel	|w| for w > 0
+A	3	restart	negative restart channel	|w| for w < 0
+A	4	graph	gene-only developmental similarity network	gene nodes only
+A	5	solution	q_pos	positive-channel PPR solution
+A	6	solution	q_neg	negative-channel PPR solution
+B	1	head	q_magnitude	q_pos + q_neg
+B	2	readout	developmental localization	six BrainSpan stage profiles
+B	3	head	q_signed	q_pos - q_neg
+B	4	readout	gene priority	abs(q_signed)
+B	5	readout	external sample scoring	signed gene weights
+C	1	formula	restart+	proportional to |w| for w > 0
+C	2	formula	restart-	proportional to |w| for w < 0
+C	3	formula	localization(t)	cosine(q_magnitude, p_t)
+C	4	formula	priority(g)	|q_signed(g)|

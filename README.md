@@ -1,61 +1,35 @@
-# NeuroTRACE public reproducibility release
+# NeuroTRACE reproducibility release
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22525118.svg)](https://doi.org/10.5281/zenodo.22525118)
+Developmental mapping resolves opposing expression programs in autism cortex.
 
-This repository contains the NeuroTRACE analysis code, execution environment, and usage documentation. Reproducibility data and figure source tables are distributed in the companion archive available from Zenodo (https://doi.org/10.5281/zenodo.22525118); publication-formatted figures are not included in this repository.
+This repository contains the code, processed reference inputs, final source tables and methods corresponding to the submission snapshot dated 2026-10-01. No raw expression records, individual-level scores, or controlled-access records are redistributed.
 
-## Final method
+## Developmental reference
 
-The final NeuroTRACE method is:
+The six stages, in order, are Early prenatal, Mid prenatal, Late prenatal, Early postnatal, Childhood–adolescence and Adulthood. These are descriptive labels for the processed NeuroTRACE reference. Their observed ranges are 8–12, 13–21, 24–37, 56–80, 92–820 and 976–2120 post-conception weeks, respectively. The nomenclature does not change membership or numeric profiles. Figure abbreviations are EPr, MPr, LPr, EPost, C/A and Adult.
 
-signed native modules  
-→ positive/negative restart channels  
-→ gene-only PPR  
-→ `q_pos` / `q_neg`  
-→ `q_magnitude` for developmental localization  
-→ `q_signed` for direction-aware gene scoring
+## Final calibration and intervals
 
-Positive and negative native weights are propagated independently on a gene-only graph. `q_magnitude = q_pos + q_neg` is used for developmental localization against six processed developmental profiles. `q_signed = q_pos - q_neg` is used for direction-aware gene scoring; gene priority is `abs(q_signed)` and direction is `sign(q_signed)`.
+The final calibration uses one standardized developmental-profile mean/variance matcher without replacement for NTM1–NTM3 at Top 200 and Top 500, 1,000 null draws each, 6,000 total, seed 202609301. Propagation settings are restart probability 0.35, tolerance 1e-10 and maximum 120 iterations. `scripts/calibration/unified_matcher.R` is the final calibration script. Frozen full replicate and summary tables are in `processed_results/`; Table S6 is in `supplementary_tables/`.
 
-The final graph uses gene-gene embedding k-nearest-neighbour edges, `alpha = 0.35`, tolerance `1e-10`, and at most 120 iterations. No heterogeneous stage-node or risk-node graph is used as the final method.
+External ASD intervals use Student-t residual degrees of freedom 18 (GSE64018) and 47 (GSE102741), with coefficients, SE, P and FDR retained. All six GSE53987 MDD individual models use df_resid=30 and Student-t 95% confidence intervals from saved beta and SE; saved t/P independently verify df. Table S10 includes all six models. S7 cross-disorder means and direction counts are descriptive, with no pooled inference.
 
-## Repository structure
+## Structure and use
 
-* `scripts/analysis`: dual-head gene-only PPR analysis.
-* `scripts/simulation`: matched-random calibration and confirmatory simulation.
-* `scripts/validation`: external ASD validation.
-* `scripts/figures`: deterministic rendering from the extracted source tables.
-* `environment`: Python and conda environment specifications.
-* `data/README.md`: data acquisition and archive-extraction instructions.
-* `metadata`: public release metadata and code/file inventories.
+- `processed_inputs/`: aggregate six-stage BrainSpan profiles, native module weights and frozen graph.
+- `processed_results/`: complete null replicates, calibration, external intervals and six MDD models.
+- `figure_source_data/`: final Fig1–Fig5 and S1–S7 source tables.
+- `supplementary_tables/`: supplementary table mirrors.
+- `scripts/figures/`: final deterministic plotting code, including the sequential Figure5/S2 quantitative palette.
+- `documentation/`: supplementary methods, processed-input guidance and source index.
+- `metadata/`: release file and submission snapshot hashes.
 
-This GitHub package intentionally contains no rendered figures, supplementary files, figure source data, processed data, or intermediate result tables.
+See `RUN_FIRST.md` for environment and commands. Historical analysis/simulation comparator scripts require unbundled upstream inputs and helpers. The runnable final entry points are the frozen-table renderer, saved MDD CI verification and unified matcher documented in RUN_FIRST.md. No analysis was rerun to prepare this snapshot.
 
-## Data and accessions
+## Archive availability
 
-The reproducibility archive contains derived, redistributable tables associated with public resources including GEO GSE102741 and GSE64018, BrainSpan developmental profiles, PsychENCODE resources, and the Velmeshev single-cell reference. Raw expression matrices and controlled-access records are not redistributed. See `data/README.md`.
-
-## Environment setup
-
-Python 3.10 or newer is supported:
-
-```bash
-python -m venv .venv
-. .venv/bin/activate
-python -m pip install -r environment/requirements.txt
-```
-
-Alternatively, create the conda environment from `environment/environment.yml`.
-
-## Reproducibility workflow
-
-1. Download the companion NeuroTRACE reproducibility archive from Zenodo: https://doi.org/10.5281/zenodo.22525118
-2. Extract `processed_data/`, `figure_source_data/`, and `intermediate_results/` into the repository as described in `RUN_FIRST.md`.
-3. Run the analysis and validation scripts in the declared order.
-4. Run the figure renderer after the source tables have been extracted.
-
-The scripts use repository-relative paths and do not download biological data automatically.
+The existing public Zenodo record is https://doi.org/10.5281/zenodo.22525118 (concept DOI https://doi.org/10.5281/zenodo.20159203). It predates this snapshot. The companion archive for this snapshot requires authenticated publication and is not represented as published. The complete frozen source tables are available directly in this GitHub repository; `metadata/zenodo_publication.json` records the archive state. A new version DOI must be synchronized before the companion archive is cited as the final version.
 
 ## Citation and license
 
-Please cite the associated NeuroTRACE manuscript, this repository, the reproducibility archive, and the original data providers. `CITATION.cff` contains the software citation metadata without a DOI placeholder. Code is distributed under the MIT License; source datasets remain subject to their original providers' terms.
+Please cite the associated manuscript, this repository and the original data providers. Software citation metadata are in `CITATION.cff`. Code remains under the repository MIT license; original resource reuse conditions apply.

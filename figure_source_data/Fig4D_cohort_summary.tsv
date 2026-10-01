@@ -1,0 +1,3 @@
+cohort	direction_concordant_n	native_fdr_significant_n	signed_ppr_fdr_significant_n	comparison_denominator	median_signed_minus_native_beta
+GSE102741	6	0	0	6	-0.093255094422548701
+GSE64018	6	5	4	6	-0.16458455981225939

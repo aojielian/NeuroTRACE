@@ -220,7 +220,7 @@ def main():
          "against the exact processed six-stage BrainSpan profiles"),
         ("head", "localization_contrast",
          "mean(magnitude_cosine early/mid/late prenatal) - "
-         "mean(magnitude_cosine childhood/adolescence/adulthood)"),
+         "mean(magnitude_cosine early_postnatal/childhood_adolescence/adulthood)"),
         ("head", "gene_priority", "abs(q_signed)"),
         ("head", "gene_direction", "sign(q_signed)"),
         ("head", "external_disease_score_weight", "q_signed"),

@@ -1,0 +1,7 @@
+panel	display_order	component_type	component	definition
+A	1	input	signed native module weights	frozen signed weights
+A	2	restart	positive restart channel	|w| for w > 0
+A	3	restart	negative restart channel	|w| for w < 0
+A	4	graph	gene-only developmental similarity network	gene nodes only
+A	5	solution	q_pos	positive-channel PPR solution
+A	6	solution	q_neg	negative-channel PPR solution

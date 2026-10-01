@@ -1,0 +1,6 @@
+panel	display_order	component_type	component	definition
+B	1	head	q_magnitude	q_pos + q_neg
+B	2	readout	developmental localization	six BrainSpan stage profiles
+B	3	head	q_signed	q_pos - q_neg
+B	4	readout	gene priority	abs(q_signed)
+B	5	readout	external sample scoring	signed gene weights

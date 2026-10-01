@@ -1,0 +1,7 @@
+stage_order	stage_id	display_label	abbreviation	observed_pcw
+1	early_prenatal	Early prenatal	EPr	8–12
+2	mid_prenatal	Mid prenatal	MPr	13–21
+3	late_prenatal	Late prenatal	LPr	24–37
+4	early_postnatal	Early postnatal	EPost	56–80
+5	childhood_adolescence	Childhood–adolescence	C/A	92–820
+6	adulthood	Adulthood	Adult	976–2120

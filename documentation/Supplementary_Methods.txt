@@ -1,0 +1,61 @@
+Online Resource 3 - Supplementary Methods
+
+Developmental mapping resolves opposing expression programs in autism cortex
+
+Aojie Lian1,2*; Mei He1; Qiong Wang1
+
+1 NHC Key Laboratory of Birth Defect for Research and Prevention, Hunan Provincial Maternal and Child Health Care Hospital, Changsha, Hunan 410028, China
+
+2 Hunan Provincial University Key Laboratory of the Fundamental and Clinical Research on Neurodegenerative Diseases, Changsha Medical University, Changsha, Hunan 410219, China
+
+1 BrainSpan sample selection and age conversion
+
+Developmental input was the BrainSpan expression matrix projected to gene symbols and the annotated sample table retained in the study workflow. The annotated collection contains 524 samples from 42 donors and 26 regions; 391 samples are marked cortical and form the processed cortical input. The cortical subset contains 48 early-prenatal, 92 mid-prenatal, 30 late-prenatal, 33 early postnatal, 95 childhood–adolescence and 93 adulthood samples. These counts refer to samples, not independent donors within each stage.
+
+The retained conversion function represents age in post-conception weeks (pcw): pcw values are unchanged, months are converted as 40 + 4 × months, and years as 40 + 52 × years. This is the conversion implemented in the study workflow, rather than a new calendar-age conversion. Stage rules are early prenatal <13 pcw, mid prenatal 13 to <24, late prenatal 24 to <38, infancy 38 to <52, early postnatal 52 to <88, childhood–adolescence 88 to <976, and adulthood ≥976. The annotated table contains no sample in the 38 to <52 pcw infancy interval. Thus the final reference contains six observed stages and no infancy stage; no infancy profile was imputed or added.
+
+2 Six-stage reference construction
+
+These are descriptive labels for the processed NeuroTRACE six-stage reference, not stage names assigned by the original BrainSpan resource. Bin/rule boundaries are specified above; actual observed ranges are reported below. The observed age ranges in the annotated table are 8–12 pcw for early prenatal, 13–21 for mid prenatal, 24–37 for late prenatal, 56–80 for early postnatal, 92–820 for childhood–adolescence and 976–2120 for adulthood. Historical preparation selected samples marked cortical, applied log1p to the projected expression values, and subtracted each gene’s mean within each cortical region from its samples in that region. Genes with residual sample standard deviation no greater than 1e-8 were removed; retained residual expression was divided by its gene-wise sample standard deviation.
+
+The downstream reference is the retained processed table of 30,000 rows: 5,000 gene symbols × six states, with a stage_profile_z value for each gene–state pair. Final mapping and random matching both use this standardized six-state profile table, aligned to the frozen graph’s 5,000-gene universe. The original processing history and its intermediate expression representation are distinguished from the final stage_profile_z table: the latter is the numerical authority for developmental projection. No new raw BrainSpan reconstruction or developmental embedding fit was performed for the submitted analyses.
+
+3 Selection of the 5,000-gene reference
+
+The available preparation code scores developmental informativeness using the sum of standardized gene-wise residual variance, the absolute prenatal-minus-postnatal mean residual-expression contrast, and one-way stage eta-squared. For eta-squared, between-stage sum of squares is divided by total sum of squares, with zero assigned when the total is zero. The three components are standardized across retained genes, with 1e-8 stabilizers in their standard-deviation denominators. Genes are ranked by this summed score and the highest 5,000 retained.
+
+The historical preparation then clips the selected standardized residual matrix to [−4, 4] and shifts each gene by its row minimum plus 1e-6 to obtain a nonnegative intermediate matrix. These transformations document the retained input history; they are not substituted for the standardized stage_profile_z representation used in the final calibration. Discovery module selection precedes intersection with the graph, so requested top-200/top-500 selections and mapped gene counts differ.
+
+4 Embedding and graph provenance
+
+The retained developmental representation is a PCA gene embedding derived from the processed BrainSpan cortical expression input. Its associated summary records 5,000 genes, 391 cortical samples and six stage groups. The submitted analyses use the retained embedding and stage profiles; they do not claim a new foundation-model embedding or an independent reconstruction from raw reads.
+
+Each gene is linked to 15 nearest neighbours in the developmental embedding. Propagation selects only edges labelled gene_gene_embedding_knn from the retained graph, maps endpoints to the 5,000 genes, retains positive finite weights, symmetrizes them and row-normalizes the adjacency matrix. Although the archived heterogeneous graph also contains module, stage and risk edges, none enter the final gene-only propagation. Developmental stage profiles are readouts after propagation, not propagation nodes or direct blending inputs. The nonempty positive and negative restart distributions are separately normalized; absent channels contribute zero. The magnitude output is q_positive + q_negative and the signed output is q_positive − q_negative.
+
+5 Unified matched-random calibration
+
+All six primary combinations use the same matcher: NTM1, NTM2 and NTM3, each at top 200 and top 500. Matching features are the mean and sample variance of each gene’s standardized six-stage profile. Quintile bins use average ranks and ceiling(rank / maximum rank × 5), bounded to 1–5. The current observed module genes are excluded. For each observed mapped gene in rank order, an unused non-module gene is sampled from the joint mean/variance bin; an empty joint bin relaxes successively to the mean bin, variance bin and any remaining eligible non-module gene. Sampling proceeds without replacement and preserves the mapped gene count. The corresponding observed weight/sign multiset is randomly permuted onto sampled genes, then each nonempty sign channel is normalized in the same manner as the observed module.
+
+There are B = 1,000 draws for each combination, for 6,000 null replicates in total. The base seed is 202609301. Independent combination streams use base seed + combination index × 1000003, in order NTM1 top200, NTM1 top500, NTM2 top200, NTM2 top500, NTM3 top200 and NTM3 top500. Restart probability is 0.35, convergence tolerance 1e-10 and the retained iteration limit is 120. The calibration script solves the same linear PPR fixed point by sparse LU in batches and records each replicate’s equation residual; all recorded residuals are below the tolerance.
+
+The developmental contrast is the mean of early-, mid- and late-prenatal cosines minus the mean of early postnatal, childhood–adolescence and adulthood cosines for the magnitude vector. Two-sided empirical P is the smaller of one and twice the smaller plus-one tail probability, using ≥ and ≤ comparisons with the observed contrast and denominator B + 1. Benjamini–Hochberg adjustment includes all six comparisons. Null medians and 2.5th/97.5th percentiles describe random-module variability, not uncertainty around the observed contrast. Top-stage counts are descriptive. Complete replicate records retain combination, replicate index, contrast, top stage, six cosines, seed and residuals.
+
+6 Processed Gandal discovery input
+
+Discovery uses the processed subject-level mean-expression matrix distributed in the retained study workflow. The model-used subset contains 103 subjects: 49 with ASD and 54 controls. Ages range from 2.0 to 67.3 years, so the discovery subset is not restricted to adults. Subject metadata retain n_samples, summing to 725 sample observations. That total is not the number of independent discovery subjects.
+
+Gene-wise ordinary least-squares discovery models use diagnosis with age, RNA integrity number (RIN), postmortem interval (PMI) and sex covariates, as recorded in the retained model summary. Available numerical covariates are median-imputed when needed and non-informative covariates are excluded. Native module weights retain the discovery coefficient sign and −log10 of its two-sided P value. Analyses used the processed subject-level mean-expression matrix distributed in the frozen study workflow; NeuroTRACE did not recompute the original sample-to-subject regional aggregation. The available files do not establish a complete original sample-to-region crosswalk, and no unsupported regional aggregation procedure is inferred.
+
+7 External OLS inference and Student-t intervals
+
+The external family contains 36 models: two datasets × three score methods × three modules × two primary thresholds. Scores are standardized within dataset and modeled by diagnosis with age, RIN and sex, with PMI additionally included for GSE64018. GSE64018 has 24 model-used samples and design rank 6, giving residual degrees of freedom 18. GSE102741 has 52 samples and design rank 5, giving residual degrees of freedom 47.
+
+Each two-sided 95% confidence interval is beta ± t(0.975, df_resid) × SE. The corresponding critical values are 2.100922040241038 for df = 18 and 2.011740513729766 for df = 47. This interval definition is used in Table S8, Fig. 4 and Supplementary Fig. S5. The coefficients, standard errors, regression t statistics, P values and 36-model BH-FDR remain those of the retained external fits. For example, GSE64018 signed-PPR NTM3 top200 has beta 1.2953358585, SE 0.3839115361 and interval 0.4887676507–2.1019040663.
+
+For all six individual MDD models in GSE53987 (three modules at Top 200 and Top 500), saved two-sided t statistics and P values verify residual degrees of freedom 30. The model uses 36 samples and six design columns. Student-t 95% confidence intervals are beta ± t(0.975, 30) × SE, using full-precision saved beta and SE. Coefficients, standard errors, t statistics, P values, within-disease FDR and sample counts are retained. The displayed Top 500 intervals all cross zero.
+
+8 Reproducibility scope and processed inputs
+
+Reproduction of the submitted downstream results starts from the retained processed BrainSpan profiles and PCA embedding, the selected gene-only graph, processed Gandal subject-level input and native module weights, and the retained external model/source tables. Supplementary Tables S1–S2 describe resources and parameters, S6 reports the unified six-comparison calibration, S8 contains the Student-t interval fields, and S11 maps final figures to their source data. The complete null replicate table and final plotting code are included in the prepared release update. The existing repository and archive are identified in the manuscript; updating that release is a separate action and is not represented as already completed here.
+
+These methods document verifiable preparation history and the actual processed numerical inputs. They do not claim raw sequencing reprocessing, newly recovered regional aggregation or a new upstream embedding fit. Cross-disorder effect means and direction counts are descriptive; no pooled significance test was applied because comparisons share controls and nested gene sets. The available MDD model FDR values are within disease. Nested thresholds provide sensitivity comparisons rather than independent biological replications.

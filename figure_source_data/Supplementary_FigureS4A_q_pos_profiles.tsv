@@ -1,0 +1,37 @@
+program	top_n	channel	state_id	channel_cosine	stage_order
+NTM1_ASD_up	200	positive	early_prenatal	0.083980027881991492	1
+NTM1_ASD_up	200	positive	mid_prenatal	0.055321784279753504	2
+NTM1_ASD_up	200	positive	late_prenatal	0.20191718161965636	3
+NTM1_ASD_up	200	positive	early_postnatal	0.018311687251147849	4
+NTM1_ASD_up	200	positive	childhood_adolescence	-0.057385094210440413	5
+NTM1_ASD_up	200	positive	adulthood	-0.12336979277170053	6
+NTM1_ASD_up	500	positive	early_prenatal	0.11544086491028124	1
+NTM1_ASD_up	500	positive	mid_prenatal	0.07624464098786711	2
+NTM1_ASD_up	500	positive	late_prenatal	0.29358652012488168	3
+NTM1_ASD_up	500	positive	early_postnatal	0.026001036224047966	4
+NTM1_ASD_up	500	positive	childhood_adolescence	-0.080498677756557807	5
+NTM1_ASD_up	500	positive	adulthood	-0.17207552354549818	6
+NTM2_ASD_down	200	positive	early_prenatal		1
+NTM2_ASD_down	200	positive	mid_prenatal		2
+NTM2_ASD_down	200	positive	late_prenatal		3
+NTM2_ASD_down	200	positive	early_postnatal		4
+NTM2_ASD_down	200	positive	childhood_adolescence		5
+NTM2_ASD_down	200	positive	adulthood		6
+NTM2_ASD_down	500	positive	early_prenatal		1
+NTM2_ASD_down	500	positive	mid_prenatal		2
+NTM2_ASD_down	500	positive	late_prenatal		3
+NTM2_ASD_down	500	positive	early_postnatal		4
+NTM2_ASD_down	500	positive	childhood_adolescence		5
+NTM2_ASD_down	500	positive	adulthood		6
+NTM3_ASD_signed	200	positive	early_prenatal	0.080150772298225162	1
+NTM3_ASD_signed	200	positive	mid_prenatal	0.066745319212265772	2
+NTM3_ASD_signed	200	positive	late_prenatal	0.16786847497285137	3
+NTM3_ASD_signed	200	positive	early_postnatal	0.0051231628495147386	4
+NTM3_ASD_signed	200	positive	childhood_adolescence	-0.062919067877134957	5
+NTM3_ASD_signed	200	positive	adulthood	-0.11874408448496851	6
+NTM3_ASD_signed	500	positive	early_prenatal	0.10559584619753298	1
+NTM3_ASD_signed	500	positive	mid_prenatal	0.070723537726627789	2
+NTM3_ASD_signed	500	positive	late_prenatal	0.26010486150340706	3
+NTM3_ASD_signed	500	positive	early_postnatal	0.023435608095802939	4
+NTM3_ASD_signed	500	positive	childhood_adolescence	-0.073867819041521857	5
+NTM3_ASD_signed	500	positive	adulthood	-0.15642694874529811	6

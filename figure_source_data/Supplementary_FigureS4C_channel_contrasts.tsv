@@ -1,0 +1,13 @@
+program	top_n	channel	localization_contrast	readout
+NTM1_ASD_up	200	positive	0.16788739783746481	q_pos
+NTM1_ASD_up	200	negative		q_neg
+NTM1_ASD_up	500	positive	0.23728173036701261	q_pos
+NTM1_ASD_up	500	negative		q_neg
+NTM2_ASD_down	200	positive		q_pos
+NTM2_ASD_down	200	negative	-0.21959237511653151	q_neg
+NTM2_ASD_down	500	positive		q_pos
+NTM2_ASD_down	500	negative	-0.28724297605080351	q_neg
+NTM3_ASD_signed	200	positive	0.16376818533197701	q_pos
+NTM3_ASD_signed	200	negative	-0.1608238462483452	q_neg
+NTM3_ASD_signed	500	positive	0.21442780170619499	q_pos
+NTM3_ASD_signed	500	negative	-0.2118266987837335	q_neg

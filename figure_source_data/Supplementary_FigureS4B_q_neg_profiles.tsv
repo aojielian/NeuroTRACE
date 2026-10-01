@@ -1,0 +1,37 @@
+program	top_n	channel	state_id	channel_cosine	stage_order
+NTM1_ASD_up	200	negative	early_prenatal		1
+NTM1_ASD_up	200	negative	mid_prenatal		2
+NTM1_ASD_up	200	negative	late_prenatal		3
+NTM1_ASD_up	200	negative	early_postnatal		4
+NTM1_ASD_up	200	negative	childhood_adolescence		5
+NTM1_ASD_up	200	negative	adulthood		6
+NTM1_ASD_up	500	negative	early_prenatal		1
+NTM1_ASD_up	500	negative	mid_prenatal		2
+NTM1_ASD_up	500	negative	late_prenatal		3
+NTM1_ASD_up	500	negative	early_postnatal		4
+NTM1_ASD_up	500	negative	childhood_adolescence		5
+NTM1_ASD_up	500	negative	adulthood		6
+NTM2_ASD_down	200	negative	early_prenatal	-0.12815797784938401	1
+NTM2_ASD_down	200	negative	mid_prenatal	-0.10136659548563644	2
+NTM2_ASD_down	200	negative	late_prenatal	-0.10391099017738192	3
+NTM2_ASD_down	200	negative	early_postnatal	0.11046405215296959	4
+NTM2_ASD_down	200	negative	childhood_adolescence	0.038971330490076325	5
+NTM2_ASD_down	200	negative	adulthood	0.17590617919414606	6
+NTM2_ASD_down	500	negative	early_prenatal	-0.17113465490513077	1
+NTM2_ASD_down	500	negative	mid_prenatal	-0.12732974928304908	2
+NTM2_ASD_down	500	negative	late_prenatal	-0.13354275915912706	3
+NTM2_ASD_down	500	negative	early_postnatal	0.15663248230091645	4
+NTM2_ASD_down	500	negative	childhood_adolescence	0.042029645942927567	5
+NTM2_ASD_down	500	negative	adulthood	0.23105963656125983	6
+NTM3_ASD_signed	200	negative	early_prenatal	-0.093533783237414916	1
+NTM3_ASD_signed	200	negative	mid_prenatal	-0.068714241403150467	2
+NTM3_ASD_signed	200	negative	late_prenatal	-0.092076272592095026	3
+NTM3_ASD_signed	200	negative	early_postnatal	0.072120555031497294	4
+NTM3_ASD_signed	200	negative	childhood_adolescence	0.028648176689134573	5
+NTM3_ASD_signed	200	negative	adulthood	0.12737850979174364	6
+NTM3_ASD_signed	500	negative	early_prenatal	-0.12437771065924096	1
+NTM3_ASD_signed	500	negative	mid_prenatal	-0.097325971034193215	2
+NTM3_ASD_signed	500	negative	late_prenatal	-0.098631021351841819	3
+NTM3_ASD_signed	500	negative	early_postnatal	0.10889222869328984	4
+NTM3_ASD_signed	500	negative	childhood_adolescence	0.036266564576369779	5
+NTM3_ASD_signed	500	negative	adulthood	0.16998660003626495	6

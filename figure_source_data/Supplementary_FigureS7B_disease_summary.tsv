@@ -1,0 +1,4 @@
+disease	n_tests	n_positive	positive_rate	label
+SCZ	18	18	1	18/18
+BD	12	12	1	12/12
+MDD	6	0	0	0/6

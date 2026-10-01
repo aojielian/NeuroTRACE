@@ -1,0 +1,29 @@
+section	component	definition
+ppr_graph	node_types	Gene nodes only.
+ppr_graph	edges	Weighted gene–gene developmental-embedding nearest-neighbour edges; no module, stage or risk-resource nodes.
+ppr_graph	alpha	0.35
+ppr_graph	tol	1e-10
+ppr_graph	max_iter	120
+ppr_graph	no_direct_stage_blend	Developmental projection is performed after propagation by cosine similarity with the processed stage profiles.
+channel	positive_restart	Absolute native weights for genes with w_g > 0, normalized within the nonempty positive channel.
+channel	negative_restart	Absolute native weights for genes with w_g < 0, normalized within the nonempty negative channel.
+channel	q_pos	PPR restart from the positive channel
+channel	q_neg	PPR restart from the negative channel
+head	q_signed	q_pos - q_neg
+head	q_magnitude	q_pos + q_neg
+head	developmental_localization	q_magnitude; primary stage rank = descending magnitude_cosine against the processed six-stage BrainSpan profiles
+head	localization_contrast	mean(magnitude_cosine early/mid/late prenatal) - mean(magnitude_cosine early postnatal/childhood–adolescence/adulthood)
+head	gene_priority	abs(q_signed)
+head	gene_direction	sign(q_signed)
+head	external_disease_score_weight	q_signed
+head	signed_orientation_label	Signed directional orientation; separate from magnitude developmental localization.
+affinity	transform	softmax(zscore(magnitude_cosine across six stages)), temperature 1.0, no fitted temperature; visualization only
+affinity	profiles	Processed stage_profile_z matrix for six BrainSpan stages on the shared 5,000-gene universe.
+selection	top_n	50, 100, 200, 500; primary calibrated thresholds 200 and 500
+simulation	simulation_proxy	Simulation-only composite scorer combining developmental similarity, smoothing and prior/invariance terms; distinct from dual-head gene-first PPR.
+channel	absent_channel	An empty channel contributes a zero propagation vector; its channel-specific cosine and contrast are undefined.
+channel	channel_weight_share	Native absolute-weight share before separate normalization; not the proportion of final propagated channel mass.
+simulation	simple_ot_and_graph_ot	The labels Simple OT and Graph OT denote simulation-specific signature/embedding composite scorers. The graph-labelled scorer additionally uses community smoothing; these are not evaluations of a separate published optimal-transport solver.
+simulation	design_conditions	High signal: baseline, high batch, composition shift, high dropout, false prior, combined stress. Challenging signal: weak signal, low overlap, composition confound, high dropout, false-prior stress, combined challenge.
+inference	matched_random	All six module–threshold combinations use standardized six-stage profile mean/variance quintiles and sampling without replacement; joint bins relax to mean, variance, then any eligible non-module gene. Mapped count and weight/sign multiset retained. B=1,000; base seed=202609301; combination seed=base seed + combination index × 1000003. Plus-one two-sided P; BH across six tests.
+inference	external_validation	Two-sided OLS t tests; 95% Student-t intervals beta ± t(0.975, df_resid) × SE; df_resid=18 for GSE64018 and 47 for GSE102741. BH correction across 36 models.

@@ -1,0 +1,17 @@
+software_or_package	version	role	availability_or_environment_note
+Python	3.13.2	Scientific analysis and figure generation	Reported scientific-analysis/figure environment; the original execution-session version was not separately recorded.
+R	4.5.1	Native module and contextual analyses	Reported native-module/context-analysis environment; the original execution-session version was not separately recorded.
+NumPy	2.5.1	Numerical computing for analyses and figures	Reported scientific-analysis and figure-generation environment.
+pandas	3.0.5	Tabular analysis and figure preparation	Reported scientific-analysis and figure-generation environment.
+SciPy	1.18.0	Scientific computation and statistical tests	Reported scientific-analysis and figure-generation environment.
+matplotlib	3.11.1	Figure generation	Reported figure-generation environment.
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

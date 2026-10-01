@@ -1,0 +1,5 @@
+panel	display_order	component_type	component	definition
+C	1	formula	restart+	proportional to |w| for w > 0
+C	2	formula	restart-	proportional to |w| for w < 0
+C	3	formula	localization(t)	cosine(q_magnitude, p_t)
+C	4	formula	priority(g)	|q_signed(g)|

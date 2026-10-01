@@ -17,7 +17,7 @@ Per null draw (identical convention to upstream F):
   -> q_magnitude = q_pos + q_neg            (final magnitude head)
   -> six-stage magnitude cosine projection
   -> localization_contrast = mean(magnitude_cosine, early/mid/late prenatal)
-                             - mean(..., childhood/adolescence/adulthood)
+                             - mean(..., early_postnatal/childhood_adolescence/adulthood)
 
 Observed rows are the final Part D magnitude-head results
 (results_realdata/03, 04) at the primary rows NTM1/NTM2/NTM3 x top200/top500.
@@ -273,7 +273,7 @@ def main():
         "channels -> gene-only PPR (alpha 0.35, tol 1e-10, max_iter 120) -> "
         "q_pos / q_neg -> q_magnitude = q_pos + q_neg -> six-stage magnitude "
         "cosine -> localization_contrast = mean(magnitude_cosine, "
-        "early/mid/late prenatal) - mean(..., childhood/adolescence/"
+        "early/mid/late prenatal) - mean(..., early_postnatal/childhood_adolescence/"
         "adulthood).",
         "- The two restart channels are evaluated separately and combined "
         "as q_magnitude = q_pos + q_neg for the localization readout.",
