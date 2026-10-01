@@ -1,7 +1,8 @@
 {
-  "state": "READY_FOR_USER_PUBLISH",
-  "existing_public_version_doi": "10.5281/zenodo.22525118",
+  "state": "PUBLISHED",
+  "version_doi": "10.5281/zenodo.23083241",
+  "version_url": "https://doi.org/10.5281/zenodo.23083241",
   "concept_doi": "10.5281/zenodo.20159203",
-  "final_snapshot_published": false,
-  "authentication_available": false
+  "concept_url": "https://doi.org/10.5281/zenodo.20159203",
+  "final_snapshot_published": true
 }

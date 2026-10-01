@@ -1,60 +1,60 @@
-table_or_topic	description		Submission metadata	Value
-Supplementary tables	Developmental mapping resolves opposing expression programs in autism cortex		Article title	Developmental mapping resolves opposing expression programs in autism cortex
-Attachment designation	Online Resource 2: Supplementary Tables (ESM_2.xlsx). Online Resource 1: Supplementary Figures S1–S7 and legends (ESM_1.pdf). Online Resource 3: Supplementary Methods (ESM_3.pdf).		Journal	European Archives of Psychiatry and Clinical Neuroscience
-S1_Cohorts_resources	Table S1. Data resources, analyzed sample counts, publication identifiers and resource links.		Authors	Aojie Lian¹,²*; Mei He¹; Qiong Wang¹
-S2_Final_method_parameters	Table S2. Gene-only dual-channel PPR parameters and definitions of the magnitude and signed readouts.		Corresponding author	Aojie Lian, PhD; aojielian@gmail.com; ORCID: 0000-0002-5334-5323
-S3_Native_module_weights	Table S3. Gene identities, signed weights, ranks and network mapping at Top 50, Top 100, Top 200 and Top 500.		Affiliations	"1 NHC Key Laboratory of Birth Defect for Research and Prevention, Hunan Provincial Maternal and Child Health Care Hospital, Changsha, Hunan 410028, China
+"table_or_topic"	"description"	""	"Submission metadata"	"Value"
+"Supplementary tables"	"Developmental mapping resolves opposing expression programs in autism cortex"	""	"Article title"	"Developmental mapping resolves opposing expression programs in autism cortex"
+"Attachment designation"	"Online Resource 2: Supplementary Tables (ESM_2.xlsx). Online Resource 1: Supplementary Figures S1–S7 and legends (ESM_1.pdf). Online Resource 3: Supplementary Methods (ESM_3.pdf)."	""	"Journal"	"European Archives of Psychiatry and Clinical Neuroscience"
+"S1_Cohorts_resources"	"Table S1. Data resources, analyzed sample counts, publication identifiers and resource links."	""	"Authors"	"Aojie Lian¹,²*; Mei He¹; Qiong Wang¹"
+"S2_Final_method_parameters"	"Table S2. Gene-only dual-channel PPR parameters and definitions of the magnitude and signed readouts."	""	"Corresponding author"	"Aojie Lian, PhD; aojielian@gmail.com; ORCID: 0000-0002-5334-5323"
+"S3_Native_module_weights"	"Table S3. Gene identities, signed weights, ranks and network mapping at Top 50, Top 100, Top 200 and Top 500."	""	"Affiliations"	"1 NHC Key Laboratory of Birth Defect for Research and Prevention, Hunan Provincial Maternal and Child Health Care Hospital, Changsha, Hunan 410028, China
 2 Hunan Provincial University Key Laboratory of the Fundamental and Clinical Research on Neurodegenerative Diseases, Changsha Medical University, Changsha, Hunan 410219, China"
-S4_Developmental_localization	Table S4. Developmental profiles, top-stage calls, contrasts and mapping counts from the combined magnitude vector.		Online Resource	Online Resource 2 (ESM_2.xlsx)
-S5_Channel_localization	Table S5. Positive/negative restart composition and channel-specific developmental profiles.			
-S6_Matched_random_calibration	Table S6. Empirical two-sided P values and BH-FDR for six primary module–threshold contrasts.			
-S7_Confirmatory_sim_global	Table S7. Simulation design-level means; 1,200 replicates per method and design.			
-S7b_Confirmatory_sim_condition	Table S7b. Condition-specific simulation means and standard deviations; 200 replicates per method and condition.			
-S7c_Paired_method_deltas	Table S7c. Paired differences, tests and multiple-testing families; delta is dual-head minus the stated comparator.			
-S8_External_validation	Table S8. All 36 external diagnosis models, standardized effects, coverage and native-versus-propagated comparisons.			
-S9_Composition_cell_context	Table S9. Native-module composition sensitivity and cell-type reference profiles; Top 200/Top 500 and donor counts are distinguished.			
-S10_Cross_disorder_context	Table S10. Descriptive cross-disorder effects and direction counts, with individual MDD coefficients, confidence intervals and within-disease FDR.			
-S11_Figure_source_index	Table S11. Panel-by-panel mapping to the current manuscript, supplementary figures, supporting tables and archived source filenames.			
-S12_Software_versions	Table S12. Reported scientific-analysis and figure-generation software.			
-Analysis code	https://github.com/aojielian/NeuroTRACE			
-Figure source data	Figure source data accompany this submission and the staged release update. The existing reproducibility archive is identified by https://doi.org/10.5281/zenodo.22525118.			
-Source archive filename	NeuroTRACE_Reproducibility_Archive_FINAL.zip			
-Source-file lookup	Use source basenames in S11 with the accompanying figure source data. Updated calibration and interval files are listed in the release update; the existing DOI identifies the earlier archive.			
-Figure and legend locations	Main figures and captions appear in Manuscript_EAPCN.docx; corresponding files are Fig1.tiff–Fig5.tiff. Supplementary figures and captions are in ESM_1.pdf.			
-Source-file row counts	S11 row_count records full source-file data rows, excluding the header; it is not necessarily the number of rows plotted in that panel. Semicolon-separated counts correspond to semicolon-separated filenames.			
-Value precision	Scientific values retain their original numerical precision. Cell formatting affects display only.			
-Missing values	NA means unavailable, undefined or not applicable. Missing results are distinct from zero; blank applicability fields contain no reported value.			
-Channel absence	Absent channels have zero restart count and mass; their cosine, localization contrast and top-stage call are undefined.			
-Channel profile coverage	S5 includes channel summaries at all four thresholds. Six stage-specific cosine columns are available at 200 and 500 genes; these columns remain NA at 50 and 100 genes.			
-Channel normalization	Each nonempty restart channel is normalized separately. Native absolute-weight shares describe input composition, not final propagated mass proportions.			
-Developmental stages	EPr = early prenatal; MPr = mid prenatal; LPr = late prenatal; EPost = early postnatal; C/A = childhood–adolescence; Adult = adulthood.			
-Developmental contrast	Mean cosine across early/mid/late prenatal profiles minus mean cosine across early postnatal/childhood–adolescence/adulthood. Positive values indicate greater prenatal similarity.			
-Matched-random inference	Common profile mean/variance quintile matching without replacement for all six comparisons; B=1,000; seed=202609301; plus-one two-sided empirical P and BH-FDR across six tests. Null quantiles describe background variation.			
-Top-stage frequency	Frequency among the 1,000 random modules of the observed top stage. This is descriptive and is distinct from the two-sided contrast P value and FDR.			
-NTM1 interpretation	Descriptive late-prenatal profile with positive contrast, but lower prenatal contrast than its matched-random background.			
-NTM2 interpretation	The downregulated module has a postnatal/adult reference profile relative to matched gene sets. Reference stage describes expression context, not age of disease onset.			
-NTM3 interpretation	Near-balanced magnitude contrast with distinct positive- and negative-channel profiles; the individual channel patterns are descriptive.			
-Top-1 accuracy	Fraction of simulation replicates for which the highest-ranked developmental state is in the true-state set. Source variable: alignment_hit_top1.			
-True-stage mass	Sum of normalized affinity assigned to the true developmental states. Reported only when the method has a defined affinity readout.			
-Precision@50	Proportion of true target genes among the 50 highest-ranked genes in one simulation replicate; tables report replicate means. It is a ranking metric, not a P value.			
-AUROC and AUPRC	AUROC = area under the receiver operating characteristic curve. AUPRC uses average precision for gene ranking.			
-Simulation design identifiers	high_signal and challenging_signal identify the two simulation designs. Each has six conditions and 200 replicates per condition. ALL_CONDITIONS identifies a pooled summary.			
-Simulation condition scope	The designs use different condition sets. S7b retains the original condition identifiers and corresponding results.			
-Simulation method identifiers	Simulation identifiers in S7–S7c correspond to the display labels in Fig. 5 and Fig. S2. Archived identifiers and source filenames retain their original spelling; current panel labels use lowercase letters.			
-Simple OT / Graph OT	These labels denote the simulation-specific signature/embedding composite scorers defined in Methods. The graph-labelled scorer adds community smoothing; they are not evaluations of a separate published optimal-transport solver.			
-Simulation proxy	Simulation-only composite of developmental similarity, smoothing and prior/invariance terms; distinct from the dual-head gene-first PPR implementation.			
-Simulation multiple testing	S7c BH-FDR values refer to condition-specific comparator tests within each design and metric. Pooled ALL_CONDITIONS rows are not assigned an FDR in this family; undefined tests remain NA.			
-External model inference	Two-sided regression t-test P values; BH-FDR across 36 models. Standardized beta is in cohort-specific score SD units. 95% Student-t intervals use df_resid=18 (GSE64018) or 47 (GSE102741).			
-External paired delta	delta_standardized_beta_signed_minus_native is the signed-PPR minus native standardized beta for the same cohort, module and threshold. It may repeat across rows and is not a test of the difference.			
-Cohort denominators	S1 and S8 counts describe analyzed individuals or samples, rather than complete source collections. Some diagnostic comparisons share controls, and gene-selection thresholds are nested.			
-Composition sensitivity	S9 marker-adjustment minima and maxima are cohort ranges, not confidence intervals. NNLS adjustment uses the reported adjusted/original beta ratio.			
-Cell-type context	S9 Top 200/Top 500 labels specify native gene-set thresholds. Donors: PsychENCODE 60; Velmeshev microglia 29 and each other displayed cell type 31 at both thresholds.			
-Cross-disorder context	S10 concerns native modules. Positive-test counts include shared controls and nested thresholds; they are not independent replication counts. The MDD result applies to the available GSE53987 subset.			
-Cross-disorder summaries	Effects and direction counts are descriptive. No pooled significance test was applied because comparisons share controls and nested gene sets. MDD model FDR is within disease.			
-Software version scope	S12 reports the analysis and figure-generation versions recorded with the study. Original execution-session versions for Python and R were not separately documented.			
-Resource metadata	Resource and citation URLs are supplied in S1. An unavailable instrument, donor count or identifier remains NA or explicitly unspecified rather than inferred from the full source resource.			
-Abbreviations	ASD, autism spectrum disorder; NTM, NeuroTRACE-derived transcriptomic module; PPR, personalized PageRank; BH, Benjamini–Hochberg; FDR, false discovery rate; CI, confidence interval; SD, standard deviation; SE, standard error; PC, principal component; NNLS, non-negative least squares.			
-Abbreviations (continued)	RIN, RNA integrity number; PMI, postmortem interval; SCZ, schizophrenia; BD, bipolar disorder; MDD, major depressive disorder; OPC, oligodendrocyte precursor cell.			
-Supplementary Methods	BrainSpan/Gandal input preparation, age conversion, graph provenance, unified calibration and interval methods are described in Online Resource 3 (ESM_3.pdf).			
-Developmental stage labels	Early prenatal; Mid prenatal; Late prenatal; Early postnatal; Childhood–adolescence; Adulthood. These descriptive labels name the processed six-stage reference; membership and numerical profiles are unchanged.
-MDD confidence intervals	Six individual models (three modules × Top 200/Top 500), GSE53987, df_resid=30; Student-t 95% CI from saved beta and SE. All beta, SE, t, P and within-disease FDR are unchanged.
+"S4_Developmental_localization"	"Table S4. Developmental profiles, top-stage calls, contrasts and mapping counts from the combined magnitude vector."	""	"Online Resource"	"Online Resource 2 (ESM_2.xlsx)"
+"S5_Channel_localization"	"Table S5. Positive/negative restart composition and channel-specific developmental profiles."	""	""	""
+"S6_Matched_random_calibration"	"Table S6. Empirical two-sided P values and BH-FDR for six primary module–threshold contrasts."	""	""	""
+"S7_Confirmatory_sim_global"	"Table S7. Simulation design-level means; 1,200 replicates per method and design."	""	""	""
+"S7b_Confirmatory_sim_condition"	"Table S7b. Condition-specific simulation means and standard deviations; 200 replicates per method and condition."	""	""	""
+"S7c_Paired_method_deltas"	"Table S7c. Paired differences, tests and multiple-testing families; delta is dual-head minus the stated comparator."	""	""	""
+"S8_External_validation"	"Table S8. All 36 external diagnosis models, standardized effects, coverage and native-versus-propagated comparisons."	""	""	""
+"S9_Composition_cell_context"	"Table S9. Native-module composition sensitivity and cell-type reference profiles; Top 200/Top 500 and donor counts are distinguished."	""	""	""
+"S10_Cross_disorder_context"	"Table S10. Descriptive cross-disorder effects and direction counts, with individual MDD coefficients, confidence intervals and within-disease FDR."	""	""	""
+"S11_Figure_source_index"	"Table S11. Panel-by-panel mapping to the current manuscript, supplementary figures, supporting tables and archived source filenames."	""	""	""
+"S12_Software_versions"	"Table S12. Reported scientific-analysis and figure-generation software."	""	""	""
+"Analysis code"	"https://github.com/aojielian/NeuroTRACE"	""	""	""
+"Figure source data"	"Final figure source data are archived in the reproducibility release at https://doi.org/10.5281/zenodo.23083241."	""	""	""
+"Source archive filename"	"NeuroTRACE_Reproducibility_Archive_FINAL.zip"	""	""	""
+"Source-file lookup"	"Use source basenames in Table S11 and documentation/source_index.tsv to locate the final calibration, interval and figure-source files in the reproducibility release at https://doi.org/10.5281/zenodo.23083241."	""	""	""
+"Figure and legend locations"	"Main figures and captions appear in Manuscript_EAPCN.docx; corresponding files are Fig1.tiff–Fig5.tiff. Supplementary figures and captions are in ESM_1.pdf."	""	""	""
+"Source-file row counts"	"S11 row_count records full source-file data rows, excluding the header; it is not necessarily the number of rows plotted in that panel. Semicolon-separated counts correspond to semicolon-separated filenames."	""	""	""
+"Value precision"	"Scientific values retain their original numerical precision. Cell formatting affects display only."	""	""	""
+"Missing values"	"NA means unavailable, undefined or not applicable. Missing results are distinct from zero; blank applicability fields contain no reported value."	""	""	""
+"Channel absence"	"Absent channels have zero restart count and mass; their cosine, localization contrast and top-stage call are undefined."	""	""	""
+"Channel profile coverage"	"S5 includes channel summaries at all four thresholds. Six stage-specific cosine columns are available at 200 and 500 genes; these columns remain NA at 50 and 100 genes."	""	""	""
+"Channel normalization"	"Each nonempty restart channel is normalized separately. Native absolute-weight shares describe input composition, not final propagated mass proportions."	""	""	""
+"Developmental stages"	"EPr = early prenatal; MPr = mid prenatal; LPr = late prenatal; EPost = early postnatal; C/A = childhood–adolescence; Adult = adulthood."	""	""	""
+"Developmental contrast"	"Mean cosine across early/mid/late prenatal profiles minus mean cosine across early postnatal/childhood–adolescence/adulthood. Positive values indicate greater prenatal similarity."	""	""	""
+"Matched-random inference"	"Common profile mean/variance quintile matching without replacement for all six comparisons; B=1,000; seed=202609301; plus-one two-sided empirical P and BH-FDR across six tests. Null quantiles describe background variation."	""	""	""
+"Top-stage frequency"	"Frequency among the 1,000 random modules of the observed top stage. This is descriptive and is distinct from the two-sided contrast P value and FDR."	""	""	""
+"NTM1 interpretation"	"Descriptive late-prenatal profile with positive contrast, but lower prenatal contrast than its matched-random background."	""	""	""
+"NTM2 interpretation"	"The downregulated module has a postnatal/adult reference profile relative to matched gene sets. Reference stage describes expression context, not age of disease onset."	""	""	""
+"NTM3 interpretation"	"Near-balanced magnitude contrast with distinct positive- and negative-channel profiles; the individual channel patterns are descriptive."	""	""	""
+"Top-1 accuracy"	"Fraction of simulation replicates for which the highest-ranked developmental state is in the true-state set. Source variable: alignment_hit_top1."	""	""	""
+"True-stage mass"	"Sum of normalized affinity assigned to the true developmental states. Reported only when the method has a defined affinity readout."	""	""	""
+"Precision@50"	"Proportion of true target genes among the 50 highest-ranked genes in one simulation replicate; tables report replicate means. It is a ranking metric, not a P value."	""	""	""
+"AUROC and AUPRC"	"AUROC = area under the receiver operating characteristic curve. AUPRC uses average precision for gene ranking."	""	""	""
+"Simulation design identifiers"	"high_signal and challenging_signal identify the two simulation designs. Each has six conditions and 200 replicates per condition. ALL_CONDITIONS identifies a pooled summary."	""	""	""
+"Simulation condition scope"	"The designs use different condition sets. S7b retains the original condition identifiers and corresponding results."	""	""	""
+"Simulation method identifiers"	"Simulation identifiers in S7–S7c correspond to the display labels in Fig. 5 and Fig. S2. Archived identifiers and source filenames retain their original spelling; current panel labels use lowercase letters."	""	""	""
+"Simple OT / Graph OT"	"These labels denote the simulation-specific signature/embedding composite scorers defined in Methods. The graph-labelled scorer adds community smoothing; they are not evaluations of a separate published optimal-transport solver."	""	""	""
+"Simulation proxy"	"Simulation-only composite of developmental similarity, smoothing and prior/invariance terms; distinct from the dual-head gene-first PPR implementation."	""	""	""
+"Simulation multiple testing"	"S7c BH-FDR values refer to condition-specific comparator tests within each design and metric. Pooled ALL_CONDITIONS rows are not assigned an FDR in this family; undefined tests remain NA."	""	""	""
+"External model inference"	"Two-sided regression t-test P values; BH-FDR across 36 models. Standardized beta is in cohort-specific score SD units. 95% Student-t intervals use df_resid=18 (GSE64018) or 47 (GSE102741)."	""	""	""
+"External paired delta"	"delta_standardized_beta_signed_minus_native is the signed-PPR minus native standardized beta for the same cohort, module and threshold. It may repeat across rows and is not a test of the difference."	""	""	""
+"Cohort denominators"	"S1 and S8 counts describe analyzed individuals or samples, rather than complete source collections. Some diagnostic comparisons share controls, and gene-selection thresholds are nested."	""	""	""
+"Composition sensitivity"	"S9 marker-adjustment minima and maxima are cohort ranges, not confidence intervals. NNLS adjustment uses the reported adjusted/original beta ratio."	""	""	""
+"Cell-type context"	"S9 Top 200/Top 500 labels specify native gene-set thresholds. Donors: PsychENCODE 60; Velmeshev microglia 29 and each other displayed cell type 31 at both thresholds."	""	""	""
+"Cross-disorder context"	"S10 concerns native modules. Positive-test counts include shared controls and nested thresholds; they are not independent replication counts. The MDD result applies to the available GSE53987 subset."	""	""	""
+"Cross-disorder summaries"	"Effects and direction counts are descriptive. No pooled significance test was applied because comparisons share controls and nested gene sets. MDD model FDR is within disease."	""	""	""
+"Software version scope"	"S12 reports the analysis and figure-generation versions recorded with the study. Original execution-session versions for Python and R were not separately documented."	""	""	""
+"Resource metadata"	"Resource and citation URLs are supplied in S1. An unavailable instrument, donor count or identifier remains NA or explicitly unspecified rather than inferred from the full source resource."	""	""	""
+"Abbreviations"	"ASD, autism spectrum disorder; NTM, NeuroTRACE-derived transcriptomic module; PPR, personalized PageRank; BH, Benjamini–Hochberg; FDR, false discovery rate; CI, confidence interval; SD, standard deviation; SE, standard error; PC, principal component; NNLS, non-negative least squares."	""	""	""
+"Abbreviations (continued)"	"RIN, RNA integrity number; PMI, postmortem interval; SCZ, schizophrenia; BD, bipolar disorder; MDD, major depressive disorder; OPC, oligodendrocyte precursor cell."	""	""	""
+"Supplementary Methods"	"BrainSpan/Gandal input preparation, age conversion, graph provenance, unified calibration and interval methods are described in Online Resource 3 (ESM_3.pdf)."	""	""	""
+"Developmental stage labels"	"Early prenatal; Mid prenatal; Late prenatal; Early postnatal; Childhood–adolescence; Adulthood. These descriptive labels name the processed six-stage reference; membership and numerical profiles are unchanged."
+"MDD confidence intervals"	"Six individual models (three modules × Top 200/Top 500), GSE53987, df_resid=30; Student-t 95% CI from saved beta and SE. All beta, SE, t, P and within-disease FDR are unchanged."

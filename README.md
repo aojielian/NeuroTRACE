@@ -28,7 +28,13 @@ See `RUN_FIRST.md` for environment and commands. Historical analysis/simulation 
 
 ## Archive availability
 
-The existing public Zenodo record is https://doi.org/10.5281/zenodo.22525118 (concept DOI https://doi.org/10.5281/zenodo.20159203). It predates this snapshot. The companion archive for this snapshot requires authenticated publication and is not represented as published. The complete frozen source tables are available directly in this GitHub repository; `metadata/zenodo_publication.json` records the archive state. A new version DOI must be synchronized before the companion archive is cited as the final version.
+The reproducibility archive for this release is available at
+https://doi.org/10.5281/zenodo.23083241.
+
+The concept DOI for the NeuroTRACE archive is
+https://doi.org/10.5281/zenodo.20159203.
+
+This version archives the final processed reference inputs, saved calibration replicates, source tables, plotting scripts and Supplementary Methods.
 
 ## Citation and license
 
